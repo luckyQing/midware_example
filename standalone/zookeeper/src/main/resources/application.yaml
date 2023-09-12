@@ -1,0 +1,5 @@
+midware:
+  example:
+    zk:
+      host: 192.168.15.67:2181
+      latch-path: /ha
