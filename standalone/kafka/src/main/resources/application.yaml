@@ -1,0 +1,22 @@
+kafka:
+  topics:
+    - name: topic1
+      numPartitions: 1
+      replicationFactor: 1
+spring:
+  application:
+    name: kafka-test
+  kafka:
+    # 多个server用逗号隔开
+    bootstrap-servers: localhost:9092
+    producer:
+      retries: 3
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: 1
+    consumer:
+      group-id: test
+      enable-auto-commit: false
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>zookeeper</module>
+        <module>kafka</module>
     </modules>
 
 </project>
